@@ -81,8 +81,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *play_pause[]  = { "playerctl", "play-pause", NULL };
-static const char *volume_up[]  = { "pulsemixer", "--change-volume", "+5", NULL };
-static const char *volume_down[]  = { "pulsemixer", "--change-volume", "-5", NULL };
+static const char *volume_up[]  = { "pulsemixer", "--change-volume", "+05", NULL };
+static const char *volume_down[]  = { "pulsemixer", "--change-volume", "-05", NULL };
 
 static const Key keys[] = {
 	/* modifier,                     key,                         function,        argument */
