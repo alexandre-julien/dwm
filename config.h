@@ -33,7 +33,7 @@ static const char white[] = "#f8f8f2";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#cdd6f4", "#1e1e2e" },
-	[SchemeSel] = { "#1e1e2e", "#89b4fa", "#89b4fa" },
+	[SchemeSel] = { "#1e1e2e", "#268bd2", "#268bd2" },
 	[SchemeUrg] = { "#1e1e2e", "#F38BA8", "#F38BA8" },
 };
 
