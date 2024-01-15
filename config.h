@@ -83,11 +83,15 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *play_pause[]  = { "playerctl", "play-pause", NULL };
 static const char *volume_up[]  = { "pulsemixer", "--change-volume", "+05", NULL };
 static const char *volume_down[]  = { "pulsemixer", "--change-volume", "-05", NULL };
+static const char *play_next[]  = { "playerctl", "next", NULL };
+static const char *play_prev[]  = { "playerctl", "previous", NULL };
 
 static const Key keys[] = {
 	/* modifier,                     key,                         function,        argument */
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = volume_up } },
 	{ 0,                            XF86XK_AudioLowerVolume,      spawn,          {.v = volume_down } },
+	{ MODKEY,             	        XK_period,                     spawn,          {.v = play_next } },
+	{ MODKEY,             	        XK_comma,                    spawn,          {.v = play_prev } },
 	{ MODKEY|ShiftMask,             XK_BackSpace,                 spawn,          {.v = play_pause } },
 	{ MODKEY,                       XK_p,                         spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,                    spawn,          {.v = termcmd } },
@@ -108,8 +112,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,                     togglefloating, {0} },
 	{ MODKEY,                       XK_0,                         view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                         tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,                     focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period,                    focusmon,       {.i = +1 } },
+	// { MODKEY,                       XK_comma,                     focusmon,       {.i = -1 } },
+	// { MODKEY,                       XK_period,                    focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                     tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                    tagmon,         {.i = +1 } },
 	TAGKEYS(                        XK_1,                         0)
